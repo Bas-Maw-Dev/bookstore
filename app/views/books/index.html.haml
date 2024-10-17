@@ -1,4 +1,6 @@
 %h1 Books
-%p The Lord of the Rings
-%p Tolkien
+%ul
+  - @books.each do |book|
+    %li= "#{book.title} by #{book.author}"
+
 = link_to 'New Book', '/books/new'
