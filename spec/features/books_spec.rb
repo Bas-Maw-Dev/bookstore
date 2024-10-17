@@ -3,7 +3,7 @@ RSpec.describe 'Book' do
   context 'context' do
     before do
       book = Book.create(title: 'The Lord of the Rings', author: 'Tolkien')
-      visit '/'
+      visit books_path
     end
     it 'display a list books with the title and author' do
       expect(page).to have_text('The Lord of the Rings')
